@@ -1,0 +1,641 @@
+.page-shell {
+  width: min(100% - 40px, 680px);
+  min-height: 100svh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 650;
+  letter-spacing: -0.4px;
+}
+
+.brand-mark {
+  width: 23px;
+  height: 23px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #bdc7b8;
+  border-radius: 7px;
+  color: var(--accent);
+}
+
+.brand-mark svg {
+  width: 16px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.topbar-note,
+.page-footer {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logout-button {
+  padding: 6px 0;
+  border: 0;
+  color: var(--muted);
+  background: transparent;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  color: var(--ink);
+}
+
+.todo-card {
+  flex: initial;
+  padding: 44px 46px 38px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.intro {
+  padding: 0 0 26px;
+}
+
+.eyebrow,
+.progress-label {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+h1 {
+  margin: 16px 0 7px;
+  color: var(--ink);
+  font-size: clamp(28px, 5vw, 36px);
+  line-height: 1.15;
+  letter-spacing: -1.3px;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.progress-card {
+  margin-top: 24px;
+  padding: 14px 0 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.progress-copy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-label {
+  margin: 0 0 5px;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.progress-value {
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.progress-count {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.progress-track {
+  height: 3px;
+  margin-top: 12px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #edeee9;
+}
+
+.progress-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+  transition: width 200ms ease;
+}
+
+.add-form {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 5px 6px 5px 11px;
+  border: 1px solid #dfe1da;
+  border-radius: 8px;
+  background: #fff;
+  transition: border-color 150ms ease;
+}
+
+.add-form:focus-within {
+  border-color: #9da995;
+}
+
+.add-icon {
+  color: var(--accent);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.add-form input {
+  width: 100%;
+  min-width: 0;
+  padding: 8px 0;
+  border: 0;
+  outline: 0;
+  color: var(--ink);
+  background: transparent;
+  font: inherit;
+  font-size: 12px;
+}
+
+.add-form input::placeholder {
+  color: #92948c;
+}
+
+.add-form button {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 12px;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  background: var(--accent);
+  font: inherit;
+  font-size: 11px;
+  font-weight: 550;
+  cursor: pointer;
+  transition: background 150ms ease, opacity 150ms ease;
+}
+
+.add-form button:hover:not(:disabled) {
+  background: #495f42;
+}
+
+.add-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.list-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 32px 0 11px;
+}
+
+.list-heading h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.list-heading p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.filters {
+  display: flex;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #fff;
+}
+
+.filter {
+  padding: 5px 8px;
+  border: 0;
+  border-radius: 5px;
+  color: var(--muted);
+  background: transparent;
+  font: inherit;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.filter.active {
+  color: var(--ink);
+  background: #f0f1ed;
+  font-weight: 550;
+}
+
+.task-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-height: 52px;
+  border-bottom: 1px solid #eeefeb;
+}
+
+.check-button {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid #c9ccc3;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.check-button:hover {
+  border-color: var(--accent);
+}
+
+.completed .check-button {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.check-button svg {
+  width: 12px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.task-title {
+  flex: 1;
+  color: #42443e;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.completed .task-title {
+  color: #96988f;
+  text-decoration: line-through;
+  text-decoration-color: #b8bab2;
+}
+
+.delete-button {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 5px;
+  color: #92948c;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0;
+  transition: color 150ms ease, background 150ms ease, opacity 150ms ease;
+}
+
+.task:hover .delete-button,
+.delete-button:focus-visible {
+  opacity: 1;
+}
+
+.delete-button:hover {
+  color: #a34f4f;
+  background: #f7efed;
+}
+
+.delete-button svg {
+  width: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.empty-state {
+  display: grid;
+  justify-items: center;
+  padding: 28px 16px 22px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.empty-state p {
+  max-width: 300px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.clear-button {
+  margin-top: 14px;
+  padding: 0;
+  border: 0;
+  color: var(--muted);
+  background: transparent;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.clear-button:hover {
+  color: #a34f4f;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.pagination button {
+  padding: 5px 8px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  color: #5d6057;
+  background: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.pagination button:hover:not(:disabled) {
+  border-color: #bdc6b8;
+  color: var(--accent);
+}
+
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding: 17px 2px 21px;
+  font-size: 11px;
+}
+
+.auth-shell {
+  min-height: 100svh;
+}
+
+.auth-content {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding: 20px 0 38px;
+}
+
+.auth-card {
+  width: min(100%, 420px);
+  padding: 35px 38px 28px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.auth-card h1 {
+  font-size: clamp(27px, 5vw, 34px);
+}
+
+.auth-form {
+  display: grid;
+  gap: 9px;
+  margin-top: 25px;
+}
+
+.auth-form label {
+  margin-top: 7px;
+  color: #565950;
+  font-size: 12px;
+  font-weight: 550;
+}
+
+.auth-form input {
+  width: 100%;
+  min-height: 41px;
+  padding: 9px 11px;
+  border: 1px solid #dfe1da;
+  border-radius: 6px;
+  outline: none;
+  color: var(--ink);
+  background: #fff;
+  font-size: 13px;
+}
+
+.auth-form input:focus {
+  border-color: #9da995;
+}
+
+.password-hint {
+  margin-top: -3px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.auth-submit {
+  min-height: 40px;
+  margin-top: 9px;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  background: var(--accent);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 550;
+  cursor: pointer;
+}
+
+.auth-submit:hover:not(:disabled) {
+  background: #495f42;
+}
+
+.auth-submit:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.form-error {
+  margin: 7px 0 0;
+  color: #a34f4f;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.task-error {
+  padding: 0 4px;
+}
+
+.auth-switch {
+  margin-top: 19px;
+  color: var(--muted);
+  text-align: center;
+  font-size: 11px;
+}
+
+.auth-switch button {
+  padding: 0;
+  border: 0;
+  color: var(--accent);
+  background: transparent;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.demo-note {
+  margin-top: 14px;
+  color: #92948c;
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #72856b;
+  outline-offset: 2px;
+}
+
+@media (max-width: 560px) {
+  .page-shell {
+    width: min(100% - 24px, 680px);
+  }
+
+  .topbar {
+    padding: 19px 2px;
+  }
+
+  .todo-card {
+    padding: 29px 21px 26px;
+  }
+
+  .auth-card {
+    padding: 28px 22px 24px;
+  }
+
+  .nav-user {
+    gap: 8px;
+  }
+
+  .nav-user .topbar-note {
+    max-width: 110px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .list-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .filters {
+    align-self: stretch;
+  }
+
+  .filter {
+    flex: 1;
+  }
+
+  .add-form {
+    gap: 7px;
+  }
+
+  .add-form button {
+    padding: 9px;
+  }
+
+  .page-footer {
+    font-size: 10px;
+  }
+
+  .delete-button {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
